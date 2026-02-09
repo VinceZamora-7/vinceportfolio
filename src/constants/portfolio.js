@@ -36,12 +36,12 @@ export const PROJECTS = [
   },
   {
     id: 2,
-    title: 'Project 2',
+    title: 'Requestors Guide BAP ',
     description: 'Another amazing project description',
     technologies: ['React', 'Tailwind CSS', 'Firebase'],
     liveUrl: '#',
     githubUrl: '#',
-    image: '/images/project2.jpg',
+    image: 'assets/images/project2.jpg',
   },
   {
     id: 3,
