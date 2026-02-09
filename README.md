@@ -106,6 +106,18 @@ npm run build        # Create optimized build
 npm run preview      # Test production locally
 ```
 
+### GitHub Pages (Static)
+
+You can deploy this site as a static site using GitHub Pages and GitHub Actions. The repository includes a workflow that builds the site and publishes the `dist` folder to a `gh-pages` branch.
+
+1. Push your code to the `main` branch on GitHub.
+2. The included GitHub Action (`.github/workflows/gh-pages.yml`) will run on pushes to `main`, run `npm ci`, `npm run build`, and publish `dist` to `gh-pages`.
+3. In your GitHub repository settings, enable GitHub Pages and set the source branch to `gh-pages` and the root folder (`/`).
+
+Notes:
+- Ensure `package.json` contains the `build` script (`vite build`) — already present.
+- If your site uses client-side routing, enable a fallback to `index.html` in Pages settings or consider a `_redirects` file if deploying elsewhere.
+
 ## Documentation
 
 - **[QUICKSTART.md](./QUICKSTART.md)** - Get started in 5 minutes ⚡
