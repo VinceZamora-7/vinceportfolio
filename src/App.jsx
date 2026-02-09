@@ -41,7 +41,7 @@ function App() {
       
       <main className="flex-1">
         <Hero 
-          title={`Hi, I'm ${PORTFOLIO_OWNER.name}`}
+          title={` ${PORTFOLIO_OWNER.name}`}
           subtitle={PORTFOLIO_OWNER.bio}
           ctaText="View My Work"
           ctaLink="#projects"
@@ -50,7 +50,7 @@ function App() {
         
         <About 
           name={PORTFOLIO_OWNER.name}
-          bio="I’m a developer who turns ideas into fast, polished web experiences. I build modern, accessible interfaces with clean, maintainable code and I love shipping products that people actually enjoy using."
+          bio="Focused on building fast, polished digital experiences that feel simple to use and solid in production. Strengths include clean, maintainable code, accessibility-first UI, and performance-minded development across modern stacks like React, Vite, Tailwind, PHP, and MySQL."
           experience={EXPERIENCE}
         />
         

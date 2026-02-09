@@ -16,7 +16,7 @@ export const NAVIGATION = [
   { id: 'about', label: 'About', href: '#about' },
   { id: 'projects', label: 'Projects', href: '#projects' },
   { id: 'skills', label: 'Skills', href: '#skills' },
-  { id: 'contact', label: 'Contact', href: '#contact' },
+    // { id: 'contact', label: 'Contact', href: '#contact' },
 ];
 
 export const SOCIAL_LINKS = [
@@ -27,12 +27,13 @@ export const SOCIAL_LINKS = [
 export const PROJECTS = [
   {
     id: 1,
-    title: 'ElectronikHub',
+    title: 'ELECTRONIKHUB',
     description: 'An commercial webpage and e-commerce platform for electronic products',
     technologies: ['React', 'PHP', 'MySQl'],
     liveUrl: 'https://ehub.ph/',
     githubUrl: 'https://github.com/ElectronikHub/ehubv3',
     image: 'assets/images/ehubph_screenshot.jpeg',
+    type: 'webpage', // Other company webpage
   },
   {
     id: 2,
@@ -42,6 +43,7 @@ export const PROJECTS = [
     liveUrl: '#',
     githubUrl: '#',
     image: 'assets/images/project2.jpg',
+    type: 'microsoft-tool', // Other company webpage
   },
   {
     id: 3,
@@ -51,6 +53,7 @@ export const PROJECTS = [
     liveUrl: '#',
     githubUrl: '#',
     image: '/images/project3.jpg',
+    type: 'microsoft-tool', // Tool made for Microsoft
   },
 ];
 

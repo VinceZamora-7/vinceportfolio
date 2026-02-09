@@ -6,7 +6,7 @@
 import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 
-const ProjectCard = ({ title, description, technologies, liveUrl, githubUrl, image }) => {
+const ProjectCard = ({ title, description, technologies, liveUrl, githubUrl, image, type, small }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -19,8 +19,10 @@ const ProjectCard = ({ title, description, technologies, liveUrl, githubUrl, ima
 
   return (
     <>
-      <article className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col h-full">
-      <div className="w-full h-48 bg-gray-200 overflow-hidden">
+      <article className={`bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col h-full border-2 ${type === 'microsoft-tool' ? 'border-blue-600' : type === 'webpage' ? 'border-blue-500' : 'border-gray-100'} ${small ? 'p-1' : ''}`} style={small ? {minWidth: 0, maxWidth: 200} : {}}>
+      {/* Type badge */}
+
+      <div className={small ? 'w-full h-20 bg-gray-200 overflow-hidden flex items-center justify-center' : 'w-full h-48 bg-gray-200 overflow-hidden'}>
         {image ? (
           <button
             type="button"
@@ -36,26 +38,26 @@ const ProjectCard = ({ title, description, technologies, liveUrl, githubUrl, ima
           </div>
         )}
       </div>
-      <div className="p-6 flex flex-col flex-grow">
-        <h3 className="text-2xl font-bold text-gray-900 mb-2">{title}</h3>
-        <p className="text-gray-600 mb-4 flex-grow">{description}</p>
-        <div className="flex flex-wrap gap-2 mb-4">
+      <div className={`${small ? 'p-2' : 'p-6'} flex flex-col flex-grow items-center text-center`}>
+        <h3 className={`${small ? 'text-base' : 'text-2xl'} font-bold text-gray-900 mb-1`}>{title}</h3>
+        <p className={`${small ? 'text-xs' : 'text-gray-600'} mb-2 flex-grow`}>{description}</p>
+        <div className={`flex flex-wrap gap-0.5 justify-center ${small ? 'mb-1' : 'mb-4'}`}>
           {technologies?.map((tech) => (
             <span 
               key={tech} 
-              className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium"
+              className={`px-1.5 py-0.5 bg-blue-100 text-blue-700 rounded-full ${small ? 'text-[10px]' : 'text-sm'} font-medium`}
             >
               {tech}
             </span>
           ))}
         </div>
-        <div className="flex gap-4">
+        <div className={`flex gap-1 w-full ${small ? 'mt-1 justify-center' : ''}`}>
           {liveUrl && (
             <a 
               href={liveUrl} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex-1 px-4 py-2 bg-blue-600 text-white text-center rounded hover:bg-blue-700 transition-colors font-medium"
+              className={`flex-1 ${small ? 'px-1 py-0.5 text-[10px]' : 'px-4 py-2'} bg-blue-600 text-white text-center rounded hover:bg-blue-700 transition-colors font-medium`}
             >
               Live
             </a>
@@ -65,7 +67,7 @@ const ProjectCard = ({ title, description, technologies, liveUrl, githubUrl, ima
               href={githubUrl} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex-1 px-4 py-2 bg-blue-600 text-white text-center rounded hover:bg-blue-700 transition-colors font-medium"
+              className={`flex-1 ${small ? 'px-1 py-0.5 text-[10px]' : 'px-4 py-2'} bg-blue-600 text-white text-center rounded hover:bg-blue-700 transition-colors font-medium`}
             >
               GitHub
             </a>
@@ -138,6 +140,8 @@ ProjectCard.propTypes = {
   liveUrl: PropTypes.string,
   githubUrl: PropTypes.string,
   image: PropTypes.string,
+  type: PropTypes.string,
+  small: PropTypes.bool,
 };
 
 ProjectCard.defaultProps = {
@@ -145,6 +149,8 @@ ProjectCard.defaultProps = {
   liveUrl: null,
   githubUrl: null,
   image: null,
+  type: '',
+  small: false,
 };
 
 export default ProjectCard;

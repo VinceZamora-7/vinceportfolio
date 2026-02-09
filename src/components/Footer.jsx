@@ -122,9 +122,6 @@ const Footer = ({ year, name }) => {
               Terms of Service
             </a>
           </div>
-          <p className="text-blue-400 text-sm font-medium">
-            Built with <span className="text-cyan-400">React</span> + <span className="text-cyan-400">Vite</span>
-          </p>
         </div>
       </div>
 

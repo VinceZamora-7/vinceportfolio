@@ -9,7 +9,7 @@ const Hero = ({ title, subtitle, ctaText, ctaLink, profileImage }) => {
   return (
     <section 
       id="home" 
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
       {/* Animated gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-950"></div>
@@ -55,6 +55,7 @@ const Hero = ({ title, subtitle, ctaText, ctaLink, profileImage }) => {
 
               {/* Main heading */}
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+                Hi, I'm <br/>
                 {title}
               </h1>
 
@@ -89,10 +90,10 @@ const Hero = ({ title, subtitle, ctaText, ctaLink, profileImage }) => {
                   <p className="text-3xl font-bold text-white">3+</p>
                   <p className="text-blue-200 text-sm">Years Exp.</p>
                 </div>
-                <div className="border-b-2 border-cyan-400 pb-2">
+                {/* <div className="border-b-2 border-cyan-400 pb-2">
                   <p className="text-3xl font-bold text-white">100%</p>
                   <p className="text-blue-200 text-sm">Dedicated</p>
-                </div>
+                </div> */}
               </div>
             </div>
 
