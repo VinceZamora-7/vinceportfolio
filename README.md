@@ -299,6 +299,37 @@ Hard refresh: `Ctrl+Shift+R` (Windows) or `Cmd+Shift+R` (Mac)
 4. **Test locally** - `npm run dev`
 5. **Deploy** - Use Vercel or Netlify
 
+## Deploying to Vercel (Static)
+
+This project is configured to deploy as a static site on Vercel. Follow these steps:
+
+1. Build locally to verify the production output:
+
+```bash
+npm run build
+```
+
+2. Option A — Deploy via Vercel CLI:
+
+```bash
+npm i -g vercel
+vercel --prod
+```
+
+3. Option B — Deploy via Vercel dashboard:
+  - Push your repo to GitHub/GitLab/Bitbucket
+  - Go to https://vercel.com and create a new project
+  - Import the repository, Vercel will detect a Vite project
+  - Set the build command to `npm run build` and the output directory to `dist` (this repo includes `vercel.json` to help)
+
+Notes:
+- `vercel.json` is included to ensure `@vercel/static-build` uses the `dist` output and the SPA routes to `index.html`.
+- If you prefer Netlify, the `npm run build` step creates a static `dist` folder that Netlify can also host.
+
+Troubleshooting:
+- If Vercel fails to detect the project, explicitly set the Framework Preset to "Other" and use the build command `npm run build`.
+- For environment variables (e.g., contact form API keys), add them in the Vercel project settings.
+
 ## Need Help?
 
 📚 [FILE_STRUCTURE.md](./FILE_STRUCTURE.md) - File organization
@@ -341,5 +372,6 @@ import '../styles/Hero.css'
 **Framework**: React 19.2.0 + Vite 7.3.1
 
 **Ready to deploy! 🚀**
-#   v i n c e p o r t f o l i o  
+#   v i n c e p o r t f o l i o 
+ 
  

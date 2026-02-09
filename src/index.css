@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+/* Custom Global Styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-gray-900;
+  }
+
+  /* Add scroll margin to sections for header spacing */
+  section {
+    scroll-margin-top: 5rem; /* Adjust this value (5rem = 80px) for more/less space */
+  }
+
+  a {
+    @apply transition-colors duration-300;
+  }
+
+  button {
+    @apply transition-colors duration-200;
+  }
+}
+
+/* Custom animations */
+@layer utilities {
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  @apply w-2.5;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-600;
+}
