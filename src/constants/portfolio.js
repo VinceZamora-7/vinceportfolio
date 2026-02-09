@@ -32,7 +32,7 @@ export const PROJECTS = [
     technologies: ['React', 'PHP', 'MySQl'],
     liveUrl: 'https://ehub.ph/',
     githubUrl: 'https://github.com/ElectronikHub/ehubv3',
-    image: 'src/assets/images/ehubph_screenshot.jpeg',
+    image: '/images/ehubph_screenshot.jpeg',
   },
   {
     id: 2,
