@@ -37,11 +37,11 @@ export const PROJECTS = [
   },
   {
     id: 2,
-    title: 'Requestors Guide BAP ',
+    title: 'Requestors Guide BAP',
     description: 'Another amazing project description',
-    technologies: ['React', 'Tailwind CSS', 'Firebase'],
-    liveUrl: '#',
-    githubUrl: '#',
+    technologies: ['HTML', 'CSS', 'JAVASCRIPT'],
+    liveUrl: 'https://requestorsguide-gzh8a6fph7hjdqft.southeastasia-01.azurewebsites.net/',
+    githubUrl: 'https://github.com/VinceZamora-7/requestorsguideBAP',
     image: 'assets/images/project2.jpg',
     type: 'microsoft-tool', // Other company webpage
   },
