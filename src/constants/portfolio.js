@@ -38,7 +38,7 @@ export const PROJECTS = [
   {
     id: 2,
     title: 'Requestors Guide BAP',
-    description: 'Another amazing project description',
+    description: 'Built and deployed a Requestor’s Guide web tool on Microsoft Azure that standardizes PO creation/extension requests (service type, P&C, country/category, compliance checks) and includes a local-to-USD PO currency converter.',
     technologies: ['HTML', 'CSS', 'JAVASCRIPT'],
     liveUrl: 'https://requestorsguide-gzh8a6fph7hjdqft.southeastasia-01.azurewebsites.net/',
     githubUrl: 'https://github.com/VinceZamora-7/requestorsguideBAP',
