@@ -47,11 +47,21 @@ export const PROJECTS = [
   },
   {
     id: 3,
-    title: 'Project 3',
-    description: 'Showcase your best work here',
-    technologies: ['Vue', 'Express', 'PostgreSQL'],
+    title: 'InstaFont: Multi-Language HTML Formatter',
+    description: 'InstaFont is a client-side utility designed to format text for HTML environments, specifically focusing on multi-language content within a single block of text. It automatically applies Microsoft-recommended font families based on the language script to ensure consistent and correct rendering, particularly useful for email templates that often struggle with mixed-script typography.',
+    technologies: ['HTML', 'CSS', 'JAVASCRIPT'],
     liveUrl: '#',
     githubUrl: '#',
+    image: '/images/project3.jpg',
+    type: 'microsoft-tool', // Tool made for Microsoft
+  },
+    {
+    id: 4,
+    title: 'CCM-CPM-Validity-Calculator',
+    description: 'A tool to calculate CCM (Customer Care Management) and CPM (Cost Per Mille) validity for marketing campaigns.',
+    technologies: ['HTML', 'CSS', 'JAVASCRIPT'],
+    liveUrl: 'CCM-CPM-Validity-Calculator',
+    githubUrl: 'https://github.com/VinceZamora-7/CCM-CPM-Validity-Calculato',
     image: '/images/project3.jpg',
     type: 'microsoft-tool', // Tool made for Microsoft
   },
